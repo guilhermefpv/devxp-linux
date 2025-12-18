@@ -40,10 +40,12 @@ sudo apt-get update
 sudo apt-get -y dist-upgrade
 
 # Install tools.
-sudo apt-get install -y make git python3 python3-pip
+# sudo apt-get install -y make git python3 python3-pip
+sudo apt-get install -y make git python3 python3-pip python3-venv pipx
 
 # Install Ansible via pip.
-sudo apt-get remove -y ansible
+# sudo apt-get remove -y ansible
+pipx install --include-deps ansible
 sudo apt-get autoremove -y
 python3 -m pip install --user ansible
 
